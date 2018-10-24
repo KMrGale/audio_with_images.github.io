@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>audio|imgs</title>
+<style> 
+	body {
+		background-color: rgb(196,145,2);
+	}
+	#niceButton {
+    background-color: black;
+    border: none;
+	border-radius: 15px;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+.myGraphics {
+	cursor: pointer;
+}
+
+</style>
+<!-- Here are the two functions that are linked to the heart and the starfish-->
+<script>
+	function playSoundHeart() {
+	    document.getElementById('alrightyThenAudio').play();
+	}
+
+	function playSoundStar() {
+	    document.getElementById('liveLongAudio').play();
+	}
+</script>
+
+
+</head>
+
+<body>
+
+<h1>Help with adding audio to buttons and images</h1
+<ul>  
+	<li>Button info is  <a href="https://www.w3schools.com/css/css3_buttons.asp">here</a></li>
+	<li>Audio on buttons is<a href = "https://www.elated.com/articles/html5-audio"> here</a></li>
+	<li>Working with functions is<a href = "https://www.w3schools.com/Tags/tryit.asp?filename=tryhtml5_ev_onclick" target="_blank"> here </a>(notice link opens in new tab)</li>
+	<li>Or if you want to try puting images right on your  buttons, go <a href="http://jsfiddle.net/ThinkingStiff/V5Xqr">here</a></li>
+</ul>
+
+<!-- loading up all the audio-->
+<audio id="alrightyThenAudio" preload="metadata"> <!--preload just makes it play on click faster-->
+  <source src="media/Alrighty_then.mp3" type="audio/mpeg">
+  Your browser does not support the audio element.
+</audio>
+
+<audio id="liveLongAudio" preload="metadata"> <!--preload just makes it play on click faster-->
+  <source src="media/Live_long.mp3" type="audio/mpeg">
+  Your browser does not support the audio element.
+</audio>
+
+<div>
+	<img class="myGraphics" src="media/heart.svg" alt="picky">
+	<img class="myGraphics" src="media/heart.svg" alt="picky" onclick="playSoundHeart()">
+	<img class="myGraphics" src="media/starfish.svg" alt="picky" onclick="playSoundStar()">
+	<button id="niceButton" onclick="document.getElementById('alrightyThenAudio').play()">CLICK ME 4 sound</button>
+	
+
+</div>
+
+</body>
+</html>
